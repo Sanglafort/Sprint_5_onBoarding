@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
+import { StepService } from './services/step.service';
+import { EscenaComponent } from './escena/escena.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [EscenaComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
+
 export class HomeComponent {
+
+  constructor( public stepService: StepService) {}
 
 }

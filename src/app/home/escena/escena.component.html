@@ -6,19 +6,35 @@
 
     <div class="col-md-4">
       <div class="card">
-
         <div class="card escena-img" [style.background-color]="escena.bgcolor" >
           <img [src]="escena.img" [alt]="escena.title" class="card-img-top imagen">
         </div>
-
         <div class="card-body escena-text">
               <h3 class="card-title">{{ escena.title }}</h3>
               <p class="card-text">{{ escena.description }}</p>
+
+              <div class="row controls-div">
+                  <div class="col d-flex justify-content-start">
+                    <i class="bi bi-three-dots" style="font-size: 3.5rem; color: grey;"></i>
+                  </div>
+
+                  <div class="col d-flex justify-content-end">
+                    <button (click)="backStep()" class="btn btn-rounded" ><i class="bi bi-arrow-left-circle-fill" style="font-size: 3.5rem;"></i></button>
+                    <button (click)="nextStep()" class="btn btn-rounded" ><i class="bi bi-arrow-right-circle" style="font-size: 3.5rem;"></i></button>
+                  </div>
+
+
+              </div>
+
+
+
         </div>
 
-      </div>
 
+      </div>
     </div>
+
+
 
 }
 

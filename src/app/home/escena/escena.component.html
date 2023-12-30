@@ -1,23 +1,28 @@
 
 <div class="container p-5 bg-secondary-subtle d-flex">
 
+  <div class="row">
+    @for (escena of escenaList; track escena.title) {
 
-@for (escena of escenaList; track escena.title) {
+    <div class="col-md-4">
+      <div class="card">
 
-  <div class="card">
+        <div class="card escena-img" [style.background-color]="escena.bgcolor" >
+          <img [src]="escena.img" [alt]="escena.title" class="card-img-top imagen">
+        </div>
 
-    <div class="card escena-img" [style.background-color]="escena.bgcolor" >
-      <img [src]="escena.img" [alt]="escena.title" class="card-img-top imagen">
+        <div class="card-body escena-text">
+              <h3 class="card-title">{{ escena.title }}</h3>
+              <p class="card-text">{{ escena.description }}</p>
+        </div>
+
+      </div>
+
     </div>
-
-    <div class="card-body escena-text">
-          <h3 class="card-title">{{ escena.title }}</h3>
-          <p class="card-text">{{ escena.description }}</p>
-    </div>
-
-  </div>
 
 }
+
+  </div>
 
 
 </div>

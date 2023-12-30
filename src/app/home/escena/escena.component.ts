@@ -8,10 +8,9 @@ import { iStep } from '../interfaces/interfaces';
   templateUrl: './escena.component.html',
   styleUrl: './escena.component.css'
 })
+
 export class EscenaComponent {
   @Input()
   public escenaList: iStep[] = [];
-
-
 }
 

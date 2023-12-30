@@ -1,0 +1,65 @@
+.card {
+  border: 0px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.escena-img {
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen {
+  width: 80%;
+}
+
+.escena-text {
+  padding: 2rem 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+
+
+
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6rem;
+  margin-right: 1rem;
+}
+
+
+.stripe {
+  border: none;
+  background: none;
+  height: 10px;
+  background-color: black;
+  width: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0px;
+  margin: 0 5px;
+}
+
+.dots {
+  border: none;
+  background: none;
+  height: 10px;
+  background-color: black;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0px;
+  margin: 0 5px;
+}
+
+.dots-menu .active{
+  background-color: grey;
+}

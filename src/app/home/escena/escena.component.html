@@ -1,10 +1,11 @@
 
 <div class="container p-5 bg-secondary-subtle d-flex">
 
-  <div class="row">
-    @for (escena of escenaList; track escena.title) {
+  <div class="row justify-content-center">
+    @for (escena of escenaList; track $index) {
+      @if($index === currentStep) {
 
-    <div class="col-md-4">
+    <div class="col-md-5">
       <div class="card">
         <div class="card escena-img" [style.background-color]="escena.bgcolor" >
           <img [src]="escena.img" [alt]="escena.title" class="card-img-top imagen">
@@ -19,14 +20,15 @@
                   </div>
 
                   <div class="col d-flex justify-content-end">
-                    <button (click)="backStep()" class="btn btn-rounded" ><i class="bi bi-arrow-left-circle-fill" style="font-size: 3.5rem;"></i></button>
-                    <button (click)="nextStep()" class="btn btn-rounded" ><i class="bi bi-arrow-right-circle" style="font-size: 3.5rem;"></i></button>
+                    @if( currentStep < escenaList.length -1 ) {
+                      <button (click)="nextStep()" class="btn btn-rounded" ><i class="bi bi-arrow-right-circle" style="font-size: 3.5rem;"></i></button>
+                    }
+                    @if( currentStep > 0 ) {
+                      <button (click)="backStep()" class="btn btn-rounded" ><i class="bi bi-arrow-left-circle-fill" style="font-size: 3.5rem;"></i></button>
+                    }
                   </div>
 
-
               </div>
-
-
 
         </div>
 
@@ -34,7 +36,7 @@
       </div>
     </div>
 
-
+  }
 
 }
 
